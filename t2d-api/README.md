@@ -15,3 +15,5 @@ Follow the unison-lang docs on how to create a pull request.
 ## Deployment
 
 Commit a change with an update to `CHANGELOG.md`. A github action will notice the difference and trigger a deploy.
+
+TODO: add details on how deployment works.
