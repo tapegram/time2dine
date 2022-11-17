@@ -11,7 +11,7 @@ https://docs.google.com/document/d/1tMo1FPdVn7WaN-E8CSyJiQcm2itT_Oe0QIFp5e9cfRw/
 
 This is a monorepo which we plan on holding two deployable artifacts at the moment.
 
-1) `t2d-web` a nextjs react-redux project to serve as a simple frontend. Likely to be deployed on Vercel.
+1) `t2d-web` a nextjs react-redux project to serve as a simple frontend. Deployed via Vercel hobby account. Can visit here: https://time2dine.vercel.app/
 
 2) `t2d-api` a unison web server. Likely to be deployed on AWS.
 
