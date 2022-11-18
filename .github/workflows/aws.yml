@@ -41,7 +41,6 @@ env:
                                                      # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: "t2d-api-app"                      # set this to the name of the container in the
                                                      # containerDefinitions section of your task definition
-  DOCKERFILE_PATH: "t2d-api/"
 
 permissions:
   contents: read
@@ -76,7 +75,7 @@ jobs:
         # Build a docker container and
         # push it to ECR so that it can
         # be deployed to ECS.
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG DOCKERFILE_PATH
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG t2d-api/
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
