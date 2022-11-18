@@ -26,4 +26,9 @@ From inside the `t2d-web` directory, run `yarn install` to make sure you have al
 
 ### t2d-api
 
-TBD
+You will need to install unison locally and then pull the project from unison share (link to come).
+
+Follow the docs for the dev process (to be added later, also).
+
+Deploys go to this URL
+http://ec2co-ecsel-1d9yhhighl2s-953165105.us-east-1.elb.amazonaws.com/
