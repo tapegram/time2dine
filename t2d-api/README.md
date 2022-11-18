@@ -1,6 +1,6 @@
 # t2d-api
 
-This is wrapper around a unison codebase hosted on Unison share (TODO: add link here).
+This is wrapper around a unison codebase hosted on [Unison share](https://share.unison-lang.org/@tapegram/code/latest/namespaces/public/project/t2dapi/main)
 
 ## Dev
 

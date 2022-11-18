@@ -26,7 +26,7 @@ From inside the `t2d-web` directory, run `yarn install` to make sure you have al
 
 ### t2d-api
 
-You will need to install unison locally and then pull the project from unison share (link to come).
+You will need to install unison locally and then pull the project from [Unison share](https://share.unison-lang.org/@tapegram/code/latest/namespaces/public/project/t2dapi/main).
 
 Follow the docs for the dev process (to be added later, also).
 
