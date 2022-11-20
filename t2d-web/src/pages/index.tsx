@@ -1,9 +1,29 @@
 import type { NextPage } from 'next'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Restaurant from '../features/restaurant/Restaurant'
+import * as T from '../features/restaurant/Types'
 
+type Response = {
+  restaurants: T.Restaurant[]
+}
 const IndexPage: NextPage = () => {
   const [showRestaurant, setShowRestaurant] = useState(false)
+  const [restaurants, setRestaurants] = useState([])
+
+  useEffect(
+    () => {
+      fetch("http://ec2co-ecsel-1d9yhhighl2s-953165105.us-east-1.elb.amazonaws.com/api/restaurants?latitude=41.8965812&longitude=-87.6202747").then(
+        async (result) => {
+          const data = await result.json() // should be the json
+          setRestaurants((data as Response).restaurants)
+        }
+      )
+        .catch(
+          (reason) => console.log("fúck")
+        )
+    }
+  )
+
   return (
     <div className="container my-20 min-w-full flex flex-col items-center">
       {(showRestaurant ? <Restaurant restaurant={BONGIOURNOS_NO_GOOGLE_ATTRIBUTION}></Restaurant> : <></>)}

@@ -3,13 +3,6 @@ type Props = {
   restaurant: Restaurant
 }
 
-type Restaurant = {
-  name: string
-  imageUrl: string
-  imageAlt: string
-  googleHTMLAttributation?: string // html
-}
-
 const Restaurant = ({ restaurant }: Props) => (
   <div className="card w-96 bg-base-100 shadow-xl">
     <div className="card-body">
