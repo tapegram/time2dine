@@ -13,22 +13,18 @@ const IndexPage: NextPage = () => {
 
   useEffect(
     () => {
-
-      fetch(PROD_RESTAURANTS, {
-        mode: 'cors',
-        headers: {
-          'Access-Control-Allow-Origin': '*'
-        }
-      }).then(
+      console.log("firing effect!")
+      fetch(PROD_RESTAURANTS).then(
         async (result) => {
           const data = await result.json() // should be the json
+          console.log(JSON.stringify(data))
           setRestaurants((data as Response).restaurants)
         }
       )
         .catch(
           (reason) => console.log("fúck")
         )
-    }
+    }, [] // Need to specify no dependencies otherwise state changes in the effect cause rerendering cause firing again :(
   )
 
   return (
