@@ -1,6 +1,7 @@
+import * as T from './Types'
 
 type Props = {
-  restaurant: Restaurant
+  restaurant: T.Restaurant
 }
 
 const Restaurant = ({ restaurant }: Props) => (

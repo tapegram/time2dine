@@ -6,13 +6,20 @@ import * as T from '../features/restaurant/Types'
 type Response = {
   restaurants: T.Restaurant[]
 }
+const PROD_RESTAURANTS = "https://703x6e9vcd.execute-api.us-east-1.amazonaws.com/prod/api/restaurants"
 const IndexPage: NextPage = () => {
   const [showRestaurant, setShowRestaurant] = useState(false)
   const [restaurants, setRestaurants] = useState([])
 
   useEffect(
     () => {
-      fetch("http://ec2co-ecsel-1d9yhhighl2s-953165105.us-east-1.elb.amazonaws.com/api/restaurants?latitude=41.8965812&longitude=-87.6202747").then(
+
+      fetch(PROD_RESTAURANTS, {
+        mode: 'cors',
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        }
+      }).then(
         async (result) => {
           const data = await result.json() // should be the json
           setRestaurants((data as Response).restaurants)
