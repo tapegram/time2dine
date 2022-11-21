@@ -6,3 +6,4 @@
 5 - Update dockerfile to point to new unison project
 6 - Wire up a mocked restaurants handler and health check handler
 7 - Try pointing frontend to AWS Gateway and also update backend to provide cors headers for restaurants endpoint
+8 - Try to fix restaurants route (add headers to response instead of matching on headers in the request)
