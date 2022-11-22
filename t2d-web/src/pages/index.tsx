@@ -17,7 +17,9 @@ const IndexPage: NextPage = () => {
 
   useEffect(
     () => {
-      fetch(PROD_RESTAURANTS).then(
+      fetch(PROD_RESTAURANTS, {
+        mode: 'cors'
+      }).then(
         async (result) => {
           const data = await result.json() // should be the json
           console.log(JSON.stringify(data))
