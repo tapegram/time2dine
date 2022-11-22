@@ -53,20 +53,6 @@ const IndexPage: NextPage = () => {
   )
 }
 
-const BONGIOURNOS = {
-  name: "Bongiorno's Cucina Italiana & Pizzeria",
-  imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/800px-Eq_it-na_pizza-margherita_sep2005_sml.jpg",
-  imageAlt: "Wiki Pizza",
-  googleHTMLAttributation: "<a href=\"https://maps.google.com/maps/contrib/100390283763501738247\">Bongiorno&#39;s Italian Deli &amp; Pizzeria</a>"
-}
-
-const BONGIOURNOS_NO_GOOGLE_ATTRIBUTION = {
-  name: "Bongiorno's Cucina Italiana & Pizzeria",
-  imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/800px-Eq_it-na_pizza-margherita_sep2005_sml.jpg",
-  imageAlt: "Wiki Pizza",
-  googleHTMLAttributation: null,
-}
-
 const shuffle = <A,>(array: A[]) => (array.sort((a, b) => 0.5 - Math.random()))
 
 export default IndexPage
