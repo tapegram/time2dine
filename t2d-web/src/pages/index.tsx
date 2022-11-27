@@ -8,7 +8,12 @@ type Response = {
   restaurants: T.Restaurant[]
 }
 
-const PROD_RESTAURANTS = "https://703x6e9vcd.execute-api.us-east-1.amazonaws.com/prod/api/restaurants"
+const BASE_URLS = {
+  "local": "http://localhost",
+  "prod": "https://703x6e9vcd.execute-api.us-east-1.amazonaws.com/prod",
+}
+const RESTAURANTS_ROUTE = "/api/restaurants"
+
 
 const IndexPage: NextPage = () => {
   const [showRestaurant, setShowRestaurant] = useState(false)
@@ -17,7 +22,7 @@ const IndexPage: NextPage = () => {
 
   useEffect(
     () => {
-      fetch(PROD_RESTAURANTS, {
+      fetch(BASE_URLS.prod + RESTAURANTS_ROUTE, {
         mode: 'cors'
       }).then(
         async (result) => {
