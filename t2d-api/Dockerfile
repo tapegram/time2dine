@@ -6,6 +6,6 @@ COPY compile-transcript.md .
 RUN ["ucm", "transcript", "compile-transcript.md"]
 
 ARG googleplaces_api_key
-ENV GOOGLEPLACES_API_KEY $google_places_api_key
+ENV GOOGLEPLACES_API_KEY $googleplaces_api_key
 # Run the compiled file
 ENTRYPOINT ["ucm", "run.compiled", "server.uc", "+RTS", "-N"]

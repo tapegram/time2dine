@@ -12,3 +12,4 @@
 11 - Deploy changes to use dynamic data on the restaurants endpoint
 12 - Retrigger deploy after updating env var in action and github secrets
 13 - Update dockerfile to require env var as arg and pass in via action
+14 - Fix typo in dockerfile
