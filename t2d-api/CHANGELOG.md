@@ -10,3 +10,4 @@
 9 - Small change to mocked data formatting and removed cors headers from restaurants reponses
 10 - Undo previous cors header changes since it stopped working
 11 - Deploy changes to use dynamic data on the restaurants endpoint
+12 - Retrigger deploy after updating env var in action and github secrets
