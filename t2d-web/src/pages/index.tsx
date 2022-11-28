@@ -53,7 +53,8 @@ const IndexPage: NextPage = () => {
           setRestaurant(pickRestaurant(restaurants))
           setShowRestaurant(true)
         }
-      }>
+      }
+        disabled={restaurants.length === 0} >
         {showRestaurant ? "Gross, somewhere else please!" : "Pick a restaurant! Anywhere is good!"}
       </button>
     </div >
