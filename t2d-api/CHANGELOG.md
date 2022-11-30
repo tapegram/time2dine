@@ -15,3 +15,4 @@
 14 - Fix typo in dockerfile
 15 - Doubling cpu and memory for task to see if that helps with performance
 16 - Doubling cpy and memory for the task again! Why not? $$$$$
+17 - Upgrade to new GooglePlaces lib
